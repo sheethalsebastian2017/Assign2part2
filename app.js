@@ -3,9 +3,18 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var mongoose = require('mongoose');
+mongoose.connect(
+  `mongodb+srv://assign:assignpart2@cluster0-smdxi.mongodb.net/test?retryWrites=true&w=majority`,
+  {
+    useNewUrlParser: true
+  }
+); 
+var db = mongoose.connection;
+db.on('error', err => console.log(err)); // Console log error on mongoose
+db.once('open', () => {
+  console.log('Connected to mongodb');
+});
 
 var app = express();
 
@@ -19,8 +28,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+var surveysRouter = require('./routes/surveys');
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/surveys', surveysRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
