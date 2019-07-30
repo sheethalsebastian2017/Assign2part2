@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+  div(style=`display: flex; justify-content: space-between;`)
+    a(href="/surveys") Go Back
+    a(href=`/surveys/${survey._id}/edit`) Edit Survey
+    a(href=`/surveys/${survey._id}/delete`) Delete
+  img(src=survey.hero, style=`width: 100%; max-height: 400px; object-fit: cover;`)
+  h1(style=`font-size: 50px;`)= survey.title
+  h4 Authored By: #{survey.authors.join(', ')}
+
+  p= survey.content

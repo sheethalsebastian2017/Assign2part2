@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  a(href="/surveys") Go Back
+
+  h1 Edit - #{survey.title}
+  form(method="post")
+    input(type="text" value=survey.title name="title" placeholder="Title of survey")
+    input(type="text" value=survey.hero name="hero" placeholder="hero image url")
+    textarea(name="authors" rows="3" placeholder="Authors, one per line")= survey.authors
+    textarea(name="content" rows="10" placeholder="Content goes here")=survey.content
+
+    button(type="submit") Save Survey

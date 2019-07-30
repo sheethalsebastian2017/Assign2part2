@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  a(href="/surveys/create") Create Survey
+
+  div(style=`display: flex; flex-direction: column;`)
+    each survey in surveys
+      a(style=`color: rebeccapurple; padding: 1rem; font-size: 44px; text-decoration: none;` href=`/surveys/${survey._id}`)= survey.title
