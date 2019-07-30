@@ -1,3 +1,8 @@
+/*File Name; surveys.js
+  Author; Sheethal Sebastian, Amal Baiju, Manu Cheriyan
+  Website Name; survey site
+  Description; Site structure
+  */
 const Survey = require('../../models/survey');
 
 // Surveys CRUD

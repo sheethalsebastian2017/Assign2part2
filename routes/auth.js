@@ -1,3 +1,8 @@
+/*File Name; auth.js
+  Author; Sheethal Sebastian, Amal Baiju, Manu Cheriyan
+  Website Name; survey site
+  Description; Site structure
+  */
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');

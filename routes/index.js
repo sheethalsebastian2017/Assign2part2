@@ -1,10 +1,15 @@
+/*File Name; index.js
+  Author; Sheethal Sebastian, Amal Baiju, Manu Cheriyan
+  Website Name; survey site
+  Description; Site structure
+  */
 var express = require('express');
 var surveys = require('./controllers/surveys');
 var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Survey' });
 });
 
 const requireAuth = (req, res, next) => {

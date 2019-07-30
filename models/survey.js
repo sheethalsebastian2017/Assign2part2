@@ -1,3 +1,8 @@
+/*File Name; survey.js
+  Author; Sheethal Sebastian, Amal Baiju, Manu Cheriyan
+  Website Name; survey site
+  Description; Site structure
+  */
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
