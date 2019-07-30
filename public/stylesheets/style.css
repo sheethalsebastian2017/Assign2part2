@@ -7,6 +7,10 @@
   padding: 00px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+.jumbotron {
+  background:url(../images/https://image.shutterstock.com/image-photo/word-survey-cut-out-magazine-260nw-156891005.jpg) no-repeat;
+  color: black;
+}
 
 a {
   color: rgb(166, 255, 0);
