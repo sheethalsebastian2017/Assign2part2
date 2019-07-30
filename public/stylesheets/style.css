@@ -1,8 +1,13 @@
-body {
-  padding: 50px;
+/*File Name; style.cs
+  Author; Sheethal Sebastian, Amal Baiju, Manu Cheriyan
+  Website Name; survey site
+  Description; Site structure
+  */
+  body {
+  padding: 00px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: rgb(166, 255, 0);
 }
